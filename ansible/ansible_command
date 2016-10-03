@@ -1,1 +1,2 @@
-ansible -i hosts all -m ping -u root -v --ssh-extra-args="-i ./location/to/private_key_ssh"
+ansible -i hosts all -m ping -u <USERNAME_HERE> -v --ssh-extra-args="-i <LOCATION_TO_SSH_KEY_HERE>"
+ansible-playbook deploy.yml -i hosts -u <USERNAME_HERE> -v --ssh-extra-args="-i <LOCATION_TO_SSH_KEY_HERE>"
