@@ -1,0 +1,1 @@
+ansible -i hosts all -m ping -u root -v --ssh-extra-args="-i ./location/to/private_key_ssh"
