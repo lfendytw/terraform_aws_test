@@ -1,0 +1,18 @@
+---
+- hosts: gitserver
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - role: geerlingguy.gogs
+      gogs_secret_key: 'my-secret-key'
+      gogs_config:
+        app_name: 'ansible terraform git'
+        server:
+          root_url: 'https://git.terraform_aws_test.com/'
+        database:
+          host: "127.0.0.1"
+          user: "root"
+          passwd: ""
+          name: "gogs_database_name"
+        mail:
+          from: "no-reply@example.com"
